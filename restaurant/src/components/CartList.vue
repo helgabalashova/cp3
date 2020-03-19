@@ -11,7 +11,7 @@
         <div class="name">{{item.name}}</div>
         <div>{{item.price}}</div>
         <div class="quant">{{item.quantity}}</div>
-        <div>{{item.price * item.quantity}}</div>
+        <div>{{Math.round(item.quantity * item.price * 100) / 100}}</div>
         <button v-on:click="removeProduct(item)" >Remove</button>
     </div>
     <div class="total-value">
